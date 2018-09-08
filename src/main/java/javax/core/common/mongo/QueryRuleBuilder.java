@@ -26,6 +26,9 @@ public class QueryRuleBuilder {
         //根据RuleList来循环，动态生成各种Criteria
         this.criteria = new Criteria();
 
+        this.orders = new ArrayList<Order>();
+        this.orders.add(new Order(Direction.ASC, "_id"));//默认按_id排序
+
         for (QueryRule.Rule rule : queryRule.getRuleList()) {
             switch (rule.getType()) {
                 case QueryRule.BETWEEN:

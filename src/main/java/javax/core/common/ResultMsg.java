@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * @Author lancq
- * @Description
+ * @Description 用于Service层的统一返回结果
  * @Date 2018/9/5
  **/
 public class ResultMsg<T> implements Serializable {
